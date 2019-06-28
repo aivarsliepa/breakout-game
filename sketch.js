@@ -8,8 +8,8 @@ let game;
 let gameOver = false;
 
 function setup() {
-  createCanvas(WIDTH, HEIGHT);
-  game = new Game();
+  createCanvas(WIDTH, HEIGHT).parent("sketch-container");
+  setupGame();
 }
 
 function draw() {
@@ -23,4 +23,10 @@ function draw() {
     text("Game Over", WIDTH / 2, HEIGHT / 2);
     noLoop();
   }
+}
+
+function setupGame() {
+  game = new Game();
+  gameOver = false;
+  loop();
 }
