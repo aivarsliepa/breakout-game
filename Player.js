@@ -35,7 +35,7 @@ class Player {
     this.direction.set(newSpeed, this.direction.y);
   }
 
-  move() {
+  update() {
     let newPosX = this.pos.x + this.direction.x;
     const rightWallBorder = WIDTH - this.width;
 
